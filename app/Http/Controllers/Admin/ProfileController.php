@@ -33,11 +33,8 @@ class ProfileController extends Controller
       $profile = new Profile;
       $form = $request->all();
 
-      
-
       // フォームから送信されてきた_tokenを削除する
       unset($form['_token']);
-      
 
       // データベースに保存する
       $profile->fill($form);
